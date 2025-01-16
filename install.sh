@@ -26,7 +26,8 @@ sudo apt install nvidia-driver-550 -y
 
 #remove aps
 sudo apt remove transmission-common  libreoffice-core   libreoffice-gnome libreoffice-gtk3 libreoffice-math   libreoffice-writer libreoffice-impress  libreoffice-common   firefox -y 
-
+sudo snap remove snap-store
+sudo snap remove thunderbird
 #program 
 sudo apt install python3.12-full git flatpak   python3-venv  python3-pip qbittorrent vim  vlc  wget curl -y 
 sudo apt install gnome-software-plugin-flatpak -y
