@@ -1,0 +1,39 @@
+#!/bin/bash
+#update_system
+sudo apt update && sudo apt upgrade
+
+
+
+#wine
+sudo dpkg --add-architecture i386
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo mkdir -pm755 /etc/apt/keyrings
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources
+
+
+sudo apt update
+
+sudo apt install --install-recommends winehq-stable
+
+#emacs
+sudo apt-get install ripgrep  fd-find
+sudo apt install emacs
+
+#nvidia
+sudo apt install nvidia-driver-550
+
+
+#remove aps
+sudo apt remove transmission-common  libreoffice-core   libreoffice-gnome libreoffice-gtk3 libreoffice-math   libreoffice-writer libreoffice-impress  libreoffice-common   firefox 
+
+#program 
+sudo apt install python3.12-full git flatpak   python3-venv  python3-pip qbittorrent vim  vlc  wget curl
+sudo apt install gnome-software-plugin-flatpak 
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.mozilla.firefox
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.7/obsidian_1.7.7_amd64.deb
+cd Downloads
+
+
+
